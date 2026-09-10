@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>个人简历 — 可交互网页</title>
+  <meta name="description" content="简洁设计感的交互式个人简历模板。包含个人信息、技能、工作经历、项目与联系方式。" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#">YourName</a>
+      <ul class="nav-links">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#experience">经历</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系方式</a></li>
+      </ul>
+      <button class="cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">联系我</button>
+      <button class="nav-toggle" aria-label="切换导航">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner reveal">
+        <div class="hero-left">
+          <h1>你好，我是<span class="accent"> 你的名字</span></h1>
+          <p class="lead">产品方向 / 前端工程师 / 计算机视觉研究员（可根据需要修改）</p>
+          <p class="muted">我喜欢把复杂问题拆解为优雅的界面与流畅的体验。欢迎浏览我的项目与经历。</p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">查看项目</a>
+            <a class="btn ghost" href="#experience">我的经历</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="card profile-card">
+            <img class="avatar" src="https://avatars.githubusercontent.com/u/327346598?v=4" alt="头像">
+            <h3>你的名字</h3>
+            <p class="muted small">前端工程师 • 交互设计 • 计算机视觉</p>
+            <ul class="info-list">
+              <li><strong>地址：</strong>城市, 国家</li>
+              <li><strong>邮箱：</strong><a href="mailto:youremail@example.com">youremail@example.com</a></li>
+              <li><strong>电话：</strong>+86 138 0000 0000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden>
+        <path d="M0,32 C240,112 480,0 720,32 C960,64 1200,0 1440,32 L1440 120 L0 120 Z"></path>
+      </svg>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container reveal">
+        <h2 class="section-title">关于我</h2>
+        <div class="grid two-col">
+          <div>
+            <p>我具备扎实的前端工程能力，擅长用现代 Web 技术实现高质量的交互体验。在机器学习与计算机视觉项目中也有实践经历，熟悉模型部署与数据处理流程。</p>
+            <ul class="bullets">
+              <li>快速原型与 UI 实现</li>
+              <li>性能优化与可访问性</li>
+              <li>跨平台响应式布局</li>
+            </ul>
+          </div>
+          <div>
+            <h4>核心优势</h4>
+            <p class="muted small">沟通能力 • 系统化思考 • 持续交付</p>
+            <div class="skill-chips">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TensorFlow / PyTorch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container reveal">
+        <h2 class="section-title">技能特长</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h3>前端</h3>
+            <p class="muted small">现代框架、组件化、状态管理、性能调优</p>
+            <div class="meter"><span style="--val:90%">90%</span></div>
+          </div>
+          <div class="skill">
+            <h3>视觉算法</h3>
+            <p class="muted small">目标检测、图像分割、模型部署</p>
+            <div class="meter"><span style="--val:80%">80%</span></div>
+          </div>
+          <div class="skill">
+            <h3>工程化</h3>
+            <p class="muted small">CI/CD、容器化、监控</p>
+            <div class="meter"><span style="--val:75%">75%</span></div>
+          </div>
+          <div class="skill">
+            <h3>设计</h3>
+            <p class="muted small">交互设计、原型、可用性测试</p>
+            <div class="meter"><span style="--val:70%">70%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container reveal">
+        <h2 class="section-title">工作经历</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <time>2023 — 至今</time>
+            <h3>前端工程师 / 某科技公司</h3>
+            <p>负责核心产品的前端架构与性能优化，推动组件库建设并主导若干关键交互功能的实现。</p>
+          </article>
+          <article class="timeline-item">
+            <time>2020 — 2023</time>
+            <h3>计算机视觉工程师 / 某研究所</h3>
+            <p>参与图像识别与视频分析项目，完成模型训练、数据标注流程以及上线部署。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container reveal">
+        <h2 class="section-title">项目展示</h2>
+        <div class="projects-grid">
+          <a class="project-card" href="#" target="_blank">
+            <div class="project-thumb" style="background-image:url('https://picsum.photos/seed/p1/800/600')"></div>
+            <div class="project-body">
+              <h3>项目一：可视化交互平台</h3>
+              <p class="muted small">用于数据探索的交互式可视化工具，支持实时筛选与可视化导出。</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" target="_blank">
+            <div class="project-thumb" style="background-image:url('https://picsum.photos/seed/p2/800/600')"></div>
+            <div class="project-body">
+              <h3>项目二：目标检测系统</h3>
+              <p class="muted small">结合深度学习模型与边缘推理，实现高效的目标检测与告警系统。</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" target="_blank">
+            <div class="project-thumb" style="background-image:url('https://picsum.photos/seed/p3/800/600')"></div>
+            <div class="project-body">
+              <h3>项目三：个人博客/组件库</h3>
+              <p class="muted small">采用组件化方案搭建个人博客，支持主题与快速搭建模板。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container reveal">
+        <h2 class="section-title">联系方式</h2>
+        <div class="contact-grid">
+          <div>
+            <p>欢迎通过邮箱或社交账号联系我，或直接在此页面下载简历（可替换链接）。</p>
+            <ul class="contact-list">
+              <li><strong>邮箱：</strong><a href="mailto:youremail@example.com">youremail@example.com</a></li>
+              <li><strong>Github：</strong><a href="https://github.com/shikexin123xin">github.com/shikexin123xin</a></li>
+              <li><strong>简历：</strong><a href="#">下载 PDF</a></li>
+            </ul>
+          </div>
+          <form class="contact-form" onsubmit="sendForm(event)">
+            <label>姓名<input name="name" type="text" placeholder="您的姓名"></label>
+            <label>邮箱<input name="email" type="email" placeholder="您的邮箱"></label>
+            <label>信息<textarea name="message" rows="4" placeholder="写点想说的..."></textarea></label>
+            <div style="display:flex;gap:12px;align-items:center">
+              <button class="btn" type="submit">发送</button>
+              <span class="muted small">（表单为示例，需接入后端）</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted small">© 2026 你的名字 • 制作精良的交互式简历模板</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
